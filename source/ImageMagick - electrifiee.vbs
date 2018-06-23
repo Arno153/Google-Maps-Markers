@@ -6,7 +6,7 @@
 strPath  = Replace(WScript.ScriptFullName,Wscript.ScriptName,"")
 strFile  = "marker_"
 strSave  = "markers\"
-strPos   = "text 1,-8"
+strPos   = "text -5,-8"
 strBase  = """C:\Program Files\ImageMagick-6.9.9-Q16\convert.exe"" {base} -font Roboto-Bold -pointsize 13 -fill ""{color}"" -gravity center -draw """ & strPos & " '{text}'"" """ & strPath & "{file}"""
 intNumer = 100
 strAlpha = "!, @, #, $, %, &, +, -, =, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"
@@ -30,7 +30,7 @@ For Each objFile In objFiles
 		For i = 0 To intNumer
 			Select Case i
 				Case 0, 1, 2, 3, 5, 6, 7, 9
-					strExe = Replace(strBase, strPos, "text 1,-8")
+					strExe = Replace(strBase, strPos, "text -2,-8")
 				Case Else
 					strExe = strBase
 			End Select
